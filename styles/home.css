@@ -1,70 +1,3 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-nav {
-    width: 100%;
-    max-width: 1250px;
-    padding: 15px;
-
-    display: flex;
-    justify-content: space-between;
-
-    margin-top: 25px;
-}
-
-#hamburger, #menu {
-    display: none;
-}
-
-#hamburger {
-    position: absolute;
-    right: 15px;
-
-    flex-flow: column;
-
-    width: 50px;
-
-    gap: 5px;
-
-    z-index: 2;
-}
-
-#menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    flex-flow: column;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-#hamburger div {
-    background-color: black;
-    width: 100%;
-    height: 3px;
-}
-
-#buttons a {
-    color: black;
-    text-decoration: none;
-}
-
-#buttons > a:not(:last-child) {
-    margin: 10px;
-}
-
 #intro {
     width: 100%;
     max-width: 1250px;
@@ -73,21 +6,7 @@ nav {
     flex-flow: row;
     justify-content: center;
     padding: 15px;
-    gap: 40px;
-}
-
-@media (width <= 600px) {
-    #intro {
-        flex-flow: row wrap;
-    }
-
-    #hamburger {
-        display: flex;
-    }
-
-    #buttons {
-        display: none;
-    }
+    gap: 35px;
 }
 
 #me {
@@ -105,10 +24,25 @@ nav {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+
+    gap: 25px;
+    padding: 0 25px 0 25px
 }
 
 #events img {
     width: 100%;
-    max-width: 600px;
+    max-width: 48%;
+    cursor: pointer;
+}
+
+@media (width <= 600px) {
+    #intro {
+        flex-flow: row wrap;
+    }
+}
+
+@media (width <= 680px) {
+    #events img {
+        max-width: 597px;
+    }
 }

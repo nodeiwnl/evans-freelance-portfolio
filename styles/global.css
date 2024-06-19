@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+nav {
+    width: 100%;
+    max-width: 1250px;
+    padding: 0 25px 0 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+#hamburger, #menu {
+    display: none;
+}
+
+#hamburger {
+    position: absolute;
+    right: 15px;
+
+    flex-flow: column;
+
+    width: 50px;
+
+    gap: 5px;
+
+    z-index: 2;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    flex-flow: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 4rem;
+}
+
+#hamburger div {
+    background-color: black;
+    width: 100%;
+    height: 3px;
+}
+
+#buttons a {
+    color: black;
+    text-decoration: none;
+}
+
+#buttons > a:not(:last-child) {
+    margin: 10px;
+}
+
+#logo img {
+    max-width: 75px;
+    cursor: pointer;
+}
+
+@media (width <= 600px) {
+    #hamburger {
+        display: flex;
+    }
+
+    #buttons {
+        display: none;
+    }
+}
